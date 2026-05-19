@@ -1,0 +1,17 @@
+name: MLOps CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Print Success Message
+        run: echo "GitHub Actions Working Successfully"
