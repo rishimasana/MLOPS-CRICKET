@@ -1,0 +1,77 @@
+2026-05-21 08:07:30,088 INFO MODEL LOADED SUCCESSFULLY
+2026-05-21 08:07:30,191 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-05-21 08:07:30,191 INFO [33mPress CTRL+C to quit[0m
+2026-05-21 08:07:30,191 INFO  * Restarting with stat
+2026-05-21 08:07:32,598 INFO MODEL LOADED SUCCESSFULLY
+2026-05-21 08:07:32,614 WARNING  * Debugger is active!
+2026-05-21 08:07:32,623 INFO  * Debugger PIN: 113-167-148
+2026-05-21 08:11:29,460 INFO MODEL LOADED SUCCESSFULLY
+2026-05-21 08:11:29,510 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-05-21 08:11:29,511 INFO [33mPress CTRL+C to quit[0m
+2026-05-21 08:11:29,513 INFO  * Restarting with stat
+2026-05-21 08:11:31,363 INFO MODEL LOADED SUCCESSFULLY
+2026-05-21 08:11:31,377 WARNING  * Debugger is active!
+2026-05-21 08:11:31,383 INFO  * Debugger PIN: 113-167-148
+2026-05-21 08:15:06,312 INFO MODEL LOADED SUCCESSFULLY
+2026-05-21 08:15:06,360 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-05-21 08:15:06,360 INFO [33mPress CTRL+C to quit[0m
+2026-05-21 08:15:06,360 INFO  * Restarting with stat
+2026-05-21 08:15:08,217 INFO MODEL LOADED SUCCESSFULLY
+2026-05-21 08:15:08,231 WARNING  * Debugger is active!
+2026-05-21 08:15:08,235 INFO  * Debugger PIN: 113-167-148
+2026-05-21 08:16:08,291 INFO 127.0.0.1 - - [21/May/2026 08:16:08] "GET / HTTP/1.1" 200 -
+2026-05-21 08:18:32,510 INFO 127.0.0.1 - - [21/May/2026 08:18:32] "GET / HTTP/1.1" 200 -
+2026-05-21 08:18:48,313 INFO 127.0.0.1 - - [21/May/2026 08:18:48] "[31m[1mGET /predict HTTP/1.1[0m" 405 -
+2026-05-21 08:22:51,563 INFO Incoming data: {'Runs': 120, 'Wickets': 2, 'Overs': 15}
+2026-05-21 08:22:51,628 ERROR Error occurred: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- Overs
+- Runs
+- Wickets
+Feature names seen at fit time, yet now missing:
+- Home/Away
+- Match ID
+- Opponent Strength
+- Overs Played
+- Pitch Condition
+- ...
+
+2026-05-21 08:22:51,628 INFO 127.0.0.1 - - [21/May/2026 08:22:51] "POST /predict HTTP/1.1" 200 -
+2026-05-21 08:38:23,910 INFO MODEL LOADED SUCCESSFULLY
+2026-05-21 08:38:23,987 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-05-21 08:38:23,987 INFO [33mPress CTRL+C to quit[0m
+2026-05-21 08:38:23,989 INFO  * Restarting with stat
+2026-05-21 08:38:25,885 INFO MODEL LOADED SUCCESSFULLY
+2026-05-21 08:38:25,899 WARNING  * Debugger is active!
+2026-05-21 08:38:25,908 INFO  * Debugger PIN: 113-167-148
+2026-05-21 08:38:56,517 INFO Incoming data: {'Match ID': 1001, 'Overs Played': 15, 'Wickets Lost': 2, 'Run Rate': 8.5, 'Home/Away': 1, 'Opponent Strength': 7, 'Pitch Condition': 1, 'Weather': 0}
+2026-05-21 08:38:56,517 ERROR Missing feature: Runs
+2026-05-21 08:38:56,518 INFO 127.0.0.1 - - [21/May/2026 08:38:56] "POST /predict HTTP/1.1" 200 -
+2026-05-21 08:39:30,041 INFO Incoming data: {'Match ID': 1001, 'Overs Played': 15, 'Wickets Lost': 2, 'Runs ': 8.5, 'Home/Away': 1, 'Opponent Strength': 7, 'Pitch Condition': 1, 'Weather': 0}
+2026-05-21 08:39:30,041 ERROR Missing feature: Runs
+2026-05-21 08:39:30,046 INFO 127.0.0.1 - - [21/May/2026 08:39:30] "POST /predict HTTP/1.1" 200 -
+2026-05-21 08:42:34,011 INFO  * Detected change in 'E:\\mlops-cricket\\api\\app.py', reloading
+2026-05-21 08:42:34,233 INFO  * Restarting with stat
+2026-05-21 08:42:36,500 INFO MODEL LOADED SUCCESSFULLY
+2026-05-21 08:42:36,527 WARNING  * Debugger is active!
+2026-05-21 08:42:36,529 INFO  * Debugger PIN: 113-167-148
+2026-05-21 08:43:01,263 INFO MODEL LOADED SUCCESSFULLY
+2026-05-21 08:43:01,295 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-05-21 08:43:01,295 INFO [33mPress CTRL+C to quit[0m
+2026-05-21 08:43:01,301 INFO  * Restarting with stat
+2026-05-21 08:43:02,971 INFO MODEL LOADED SUCCESSFULLY
+2026-05-21 08:43:02,985 WARNING  * Debugger is active!
+2026-05-21 08:43:02,991 INFO  * Debugger PIN: 113-167-148
+2026-05-21 08:43:26,992 INFO Incoming data: {'Match ID': 1001, 'Overs Played': 15, 'Wickets Lost': 2, 'Run Rate': 8.5, 'Home/Away': 1, 'Opponent Strength': 7, 'Pitch Condition': 1, 'Weather': 0}
+2026-05-21 08:43:27,005 INFO Prediction successful: 146.9817080276058
+2026-05-21 08:43:27,005 INFO 127.0.0.1 - - [21/May/2026 08:43:27] "POST /predict HTTP/1.1" 200 -
+2026-05-21 08:44:26,978 INFO 127.0.0.1 - - [21/May/2026 08:44:26] "GET / HTTP/1.1" 200 -
+2026-05-21 08:44:35,146 INFO 127.0.0.1 - - [21/May/2026 08:44:35] "[33mGET /predicit HTTP/1.1[0m" 404 -
+2026-05-21 08:45:24,615 INFO 127.0.0.1 - - [21/May/2026 08:45:24] "GET / HTTP/1.1" 200 -
+2026-05-21 08:45:36,818 INFO 127.0.0.1 - - [21/May/2026 08:45:36] "GET / HTTP/1.1" 200 -
+2026-05-21 08:45:52,834 INFO 127.0.0.1 - - [21/May/2026 08:45:52] "[33mGET /predict%20^ HTTP/1.1[0m" 404 -
