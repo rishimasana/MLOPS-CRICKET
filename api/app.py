@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from utils.feature_pipeline import validate_input, prepare_features
 import joblib
 import pandas as pd
 import logging
@@ -12,6 +13,8 @@ logging.basicConfig(
 
 # Create Flask app
 app = Flask(__name__)
+
+
 
 # Load trained model
 model = joblib.load("models/cricket_score_model.pkl")
@@ -29,42 +32,32 @@ def predict():
 
     try:
 
-        # Receive JSON input
         data = request.get_json()
 
-        logging.info(f"Incoming data: {data}")
+        is_valid, missing = validate_input(data)
 
-        # Validation
-       	required_features = ["Match ID","Overs Played","Wickets Lost","Run Rate","Home/Away",    "Opponent Strength",    "Pitch Condition", "Weather"]
+        if not is_valid:
+            return jsonify({
+                "error": f"Missing features: {missing}"
+            }), 400
 
-        for feature in required_features:
-            if feature not in data:
-                logging.error(f"Missing feature: {feature}")
+        features_df = prepare_features(data)
 
-                return jsonify({
-                    "error": f"Missing feature: {feature}"
-                })
+        prediction = model.predict(features_df)
 
-        # Convert to DataFrame
-        input_data = pd.DataFrame([data])
-
-        # Prediction
-        prediction = model.predict(input_data)
-
-        logging.info(f"Prediction successful: {prediction[0]}")
-
-        # Return prediction
         return jsonify({
-            "Predicted Score": float(prediction[0])
+            "Predicted Score": prediction[0]
         })
 
     except Exception as e:
 
-        logging.error(f"Error occurred: {str(e)}")
-
         return jsonify({
             "error": str(e)
-        })
+        }), 500
+
+
+
+
 
 # Run app
 if __name__ == "__main__":
