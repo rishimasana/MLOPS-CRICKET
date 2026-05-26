@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cricket Score Predictor</title>
+</head>
+
+<body>
+
+    <h1>Cricket Score Prediction</h1>
+
+    <form action="/predict" method="POST">
+
+        <label>Match ID:</label>
+        <input type="number" name="Match ID"><br><br>
+
+        <label>Overs Played:</label>
+        <input type="number" name="Overs Played"><br><br>
+
+        <label>Wickets Lost:</label>
+        <input type="number" name="Wickets Lost"><br><br>
+
+        <label>Run Rate:</label>
+        <input type="number" step="0.1" name="Run Rate"><br><br>
+
+        <label>Home/Away:</label>
+        <input type="number" name="Home/Away"><br><br>
+
+        <label>Opponent Strength:</label>
+        <input type="number" name="Opponent Strength"><br><br>
+
+        <label>Pitch Condition:</label>
+        <input type="number" name="Pitch Condition"><br><br>
+
+        <label>Weather:</label>
+        <input type="number" name="Weather"><br><br>
+
+        <button type="submit">Predict Score</button>
+
+    </form>
+
+</body>
+
+</html>
