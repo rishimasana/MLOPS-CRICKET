@@ -179,3 +179,21 @@ Feature names seen at fit time, yet now missing:
 2026-05-25 13:31:54,478 INFO 127.0.0.1 - - [25/May/2026 13:31:54] "GET / HTTP/1.1" 200 -
 2026-05-25 13:31:54,611 INFO 127.0.0.1 - - [25/May/2026 13:31:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
 2026-05-25 13:36:57,235 INFO 127.0.0.1 - - [25/May/2026 13:36:57] "POST /predict HTTP/1.1" 200 -
+2026-05-26 07:42:07,564 INFO MODEL LOADED SUCCESSFULLY
+2026-05-26 07:42:07,748 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-05-26 07:42:07,748 INFO [33mPress CTRL+C to quit[0m
+2026-05-26 07:42:07,751 INFO  * Restarting with stat
+2026-05-26 07:42:10,654 INFO MODEL LOADED SUCCESSFULLY
+2026-05-26 07:42:10,670 WARNING  * Debugger is active!
+2026-05-26 07:42:10,685 INFO  * Debugger PIN: 203-673-001
+2026-05-26 07:42:21,049 INFO 127.0.0.1 - - [26/May/2026 07:42:21] "GET / HTTP/1.1" 200 -
+2026-05-26 08:07:09,867 INFO MODEL LOADED SUCCESSFULLY
+2026-05-26 08:07:09,938 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-05-26 08:07:09,938 INFO [33mPress CTRL+C to quit[0m
+2026-05-26 08:07:09,942 INFO  * Restarting with stat
+2026-05-26 08:07:12,013 INFO MODEL LOADED SUCCESSFULLY
+2026-05-26 08:07:12,029 WARNING  * Debugger is active!
+2026-05-26 08:07:12,029 INFO  * Debugger PIN: 203-673-001
+2026-05-26 08:07:21,005 INFO 127.0.0.1 - - [26/May/2026 08:07:21] "GET / HTTP/1.1" 200 -

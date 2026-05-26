@@ -1,5 +1,7 @@
+
 from flask import Flask, request, jsonify,render_template
 from utils.feature_pipeline import validate_input, prepare_features
+
 import joblib
 import pandas as pd
 import logging
@@ -19,7 +21,8 @@ app = Flask(
 
 
 # Load trained model
-model = joblib.load("models/cricket_score_model.pkl")
+from config.config import MODEL_PATH
+model = joblib.load(MODEL_PATH)
 
 logging.info("MODEL LOADED SUCCESSFULLY")
 
@@ -28,6 +31,7 @@ logging.info("MODEL LOADED SUCCESSFULLY")
 @app.route("/")
 def home():
     return render_template("index.html")
+	
 
 # Prediction route
 # Prediction route
@@ -53,14 +57,17 @@ def predict():
 
         prediction = model.predict(features_df)
 
-        return f"Predicted Score: {prediction[0]}"
+        return render_template(
+            "index.html",
+            prediction=prediction[0]
+        )
 
     except Exception as e:
 
         return jsonify({
             "error": str(e)
         }), 500
-
+    
 
 
 
